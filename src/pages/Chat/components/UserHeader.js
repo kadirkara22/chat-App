@@ -1,0 +1,23 @@
+import React, { useContext } from 'react'
+import { LoginContext } from '../../../contexts/LoginContext';
+
+function UserHeader() {
+
+    const {selectUser,selectedUser,selectFriend,selectedFriend}=useContext(LoginContext)
+    if (!selectedUser) return null;
+  
+    return (
+        <>
+        <div className="headerInfo">
+      <div className="headerImage">
+        <img src={`${selectedUser.image}`}></img>
+    </div>  
+    <div className="headerUserName">{`${selectedUser.first_name} ${selectedUser.last_name}`}</div>
+    </div>
+    <button className="headerUserInfo">...</button>
+    
+    </>
+    )
+}
+
+export default UserHeader;

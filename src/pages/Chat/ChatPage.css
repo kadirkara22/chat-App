@@ -1,0 +1,289 @@
+
+
+.chat-container {
+    width: 100%;
+    height: 600px;
+    background: #e2e2e2;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left-side {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-side {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-list, .message-form {
+    flex: 1;
+  }
+  
+  .userInfo {
+    background-color: rgba(66, 179, 90, 0.301);
+  }
+  .userText {
+    cursor: pointer;
+    
+  }
+
+  .userInfo:hover {
+    background-color: #1238802a;
+  }
+
+  .userInfo {
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1px;
+  }
+
+  .userImage {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+   border: grey;
+   margin: 5px;
+   
+}
+
+.userImage img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+}
+
+.userImage img:hover {
+  cursor: pointer;
+}
+.userText {
+  margin: 2px;
+  padding: 2px;
+
+}
+
+.userName {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+ font-size:15px;
+ text-align: start;
+ font-weight: bold;
+}
+
+.messageText {
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+.countMessage{
+ font-size: 13px;
+ text-align: center;
+ padding-top: 3px;
+ color: white;
+ margin: 0;
+ font-weight:15px;
+ height: 20px;
+ width: 30px;
+ border-radius: 10px;
+ background:blue;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ -ms-border-radius: 10px;
+ -o-border-radius: 10px;
+}
+
+.messageAndCount{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.searcInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+ 
+ 
+}
+.inputName {
+ height: 30px;
+ width: 70%;
+ border-radius: 30px;
+ text-align: center;
+ color:red;
+ border: none;
+}
+
+.inputName:focus {
+  outline-color:rgba(0, 217, 255, 0.274);
+}
+
+
+.messageInfoUser {
+  float: left;
+  font-size: 15px;
+  color: azure;
+  background: rgba(139, 37, 235, 0.952);
+  margin: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.header{
+  height: 50px;
+  background: rgba(27, 136, 36, 0.171);
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.headerInfo{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headerImage img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.headerUserName{
+  margin:5px;
+ font-size:15px;
+ text-align: start;
+ font-weight: bold;
+}
+
+.headerUserInfo{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin-top: -5px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.headerUserInfo:hover {
+
+  background: rgba(148, 206, 174, 0.562);
+  cursor: pointer;
+}
+
+.messageinput {
+  height: 50px;
+  background: rgba(101, 156, 140, 0.041);
+}
+.sentMessageInfo{
+ 
+  height: 36px;
+  width: 100%;
+  margin:7px 5px;
+  padding-left: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: none;
+  
+}
+.sentMessageInfo:focus {
+  outline: rgb(236, 19, 66);
+}
+.messageInputSend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.SendMessage {
+  height: 36px;
+  padding: 5px;
+  margin-right: 2px;
+  background: rgb(14, 10, 221);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color:azure;
+}
+.settings {
+  height: 50px;
+  background: rgba(184, 224, 9, 0.24);
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+.logout {
+  height: 36px;
+  padding: 5px;
+  margin-right: 5px;
+  border: none;
+  background: red;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.thema {
+  height: 36px;
+  padding: 5px;
+  margin-right: 5px;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.message-form {
+  background-image: url(https://i.pinimg.com/236x/35/c8/68/35c868bb5c851fd5eb625332284cd0c8.jpg);
+}
+.user-list{
+  background-image: url(https://www.sonsuzlukisareti.com/wp-content/uploads/2020/02/whatsapp-arka-plan-duvar-ka%C4%9F%C4%B1tlar%C4%B1-32-1-486x1024.jpg);
+}
+
+.messaage-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.messaage-container.from-me {
+  justify-content: flex-end;
+  
+}
+.messaage-container.from-me > .messageInfoUser {
+  background: rgba(67, 160, 55, 0.904);
+  color:white
+}
