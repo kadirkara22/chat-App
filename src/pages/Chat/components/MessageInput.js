@@ -8,7 +8,7 @@ const{handleSendNewMessage}=useContext(LoginContext);
  
  const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-        {handleSendNewMessage(message);setMessage('')}
+        {handleSendNewMessage(message); setMessage('')}
     }
   }
 
@@ -19,7 +19,7 @@ const{handleSendNewMessage}=useContext(LoginContext);
             onChange={(e)=>{
                setMessage(e.target.value);
            }} 
-           className="sentMessageInfo" placeholder="mesaj giriniz.." autofocus="autofocus"></input>
+           className="sentMessageInfo" placeholder="mesaj giriniz.." autoFocus="autofocus"></input>
            <button className="SendMessage" 
            onClick={()=>{handleSendNewMessage(message);
            setMessage('')

@@ -3,6 +3,7 @@ import './App.css'
 import LoginContextProvider from "./contexts/LoginContext";
 import ThemeContextProvider from './contexts/ThemeContext';
 
+
 import Routes from './routes';
 
 
@@ -10,12 +11,11 @@ function App() {
  
 
   return (
-     
+    <ThemeContextProvider> 
     <LoginContextProvider>
-      <ThemeContextProvider>
       <Routes />
-      </ThemeContextProvider>
       </LoginContextProvider>
+      </ThemeContextProvider>
       
   );
 }

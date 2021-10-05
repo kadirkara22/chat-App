@@ -7,7 +7,7 @@ export const LoginContext = React.createContext();
 const LoginContextProvider=(props)=>{
     
     const [user,setUser] = useState(null);
-    const [searchUser,setSearchUser]=useState("")
+    const [searchUser]=useState("")
 
     const [selectedUser, setSelectedUser] = useState(null);
     const [selectedFriend, setSelectedFriend] = useState("");
@@ -30,8 +30,7 @@ const LoginContextProvider=(props)=>{
         localStorage.setItem("chat_app_user", JSON.stringify(user));
   
       };
-
-      console.log(user)
+console.log(user)
       const logout = () => {
         setUser(null);
         localStorage.removeItem("chat_app_user");
@@ -77,7 +76,7 @@ localStorage.setItem('chat_app_user_list',JSON.stringify(newUserList))
           const users=JSON.parse(userListFromStorage)
           setUserList(users)
         }
-      }, []);
+      }, []); 
 
 
     return (

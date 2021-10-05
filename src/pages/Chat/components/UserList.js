@@ -3,7 +3,7 @@ import { LoginContext } from '../../../contexts/LoginContext';
 import "../ChatPage.css"
 function UserList({searchText}) {
 
-    const { userList, searchUser, newList, selectUser, selectedFriend, selectFriend } = useContext(LoginContext);
+    const { userList,selectUser } = useContext(LoginContext);
 
     const filteredUserList = userList.filter((u) =>
          `${u.username}${u.first_name}${u.last_name}`.toLowerCase().includes(searchText.toLowerCase())

@@ -3,15 +3,24 @@ import { LoginContext } from '../../../contexts/LoginContext';
 import { ThemeContext } from '../../../contexts/ThemeContext';
 
 
+
 function Settings() {
     const { logout } = useContext(LoginContext);
-    const {changeTheme}=useContext(ThemeContext);
+    const { changeTheme } = useContext(ThemeContext);
+
+    const handlechange = () => {
+        changeTheme();
+    }
 
     return (
-        <div>
-         <button className="logout" type="submit" onClick={logout} >LogOut</button>
-         <button type="submit" className="thema" onClick={changeTheme} >Thema</button>
-         
+        <div className="darkLogOut">
+            <div>
+                <label class="switch">
+                    <input type="checkbox" onClick={handlechange}/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button className="logout" type="submit" onClick={logout} >LogOut</button>
         </div>
     )
 }

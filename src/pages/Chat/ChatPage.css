@@ -82,6 +82,8 @@
   font-size: 12px;
 }
 
+
+
 .countMessage{
  font-size: 13px;
  text-align: center;
@@ -238,6 +240,12 @@
   justify-content:flex-end;
   align-items: center;
 }
+.darkLogOut {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
 .logout {
   height: 36px;
   padding: 5px;
@@ -245,6 +253,7 @@
   border: none;
   background: red;
   color: black;
+  cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -252,20 +261,7 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.thema {
-  height: 36px;
-  padding: 5px;
-  margin-right: 5px;
-  border: none;
-  background: black;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
+
 .message-form {
   background-image: url(https://i.pinimg.com/236x/35/c8/68/35c868bb5c851fd5eb625332284cd0c8.jpg);
 }
@@ -286,4 +282,92 @@
 .messaage-container.from-me > .messageInfoUser {
   background: rgba(67, 160, 55, 0.904);
   color:white
+}
+
+.darkMode {
+  background:grey;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+}
+.darkMode .user-list{
+background-image: url(https://www.sonsuzlukisareti.com/wp-content/uploads/2020/02/whatsapp-arka-plan-duvar-ka%C4%9F%C4%B1tlar%C4%B1-7-1-576x1024.jpg);
+}
+.darkMode .userText {
+  color: white;
+}
+.darkMode .header{
+  color: white;
+}
+
+.darkMode .message-form{
+  background-image: url(https://i.pinimg.com/474x/51/f1/87/51f1876a6301557c38d4ac203f5cc985.jpg);
+  color: white;
+}
+.darkMode .headerUserInfo{
+  color: white;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:grey;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

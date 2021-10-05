@@ -1,6 +1,7 @@
 import React, { useContext, useState} from 'react';
 import { Redirect, useLocation } from 'react-router-dom';
 import { LoginContext } from '../../contexts/LoginContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 import './ChatPage.css'
 import Message from './components/Message';
 import MessageInput from './components/MessageInput';
@@ -9,17 +10,20 @@ import Settings from './components/Settings';
 import UserHeader from './components/UserHeader';
 import UserList from './components/UserList';
 
+
 function ChatPage (){
   const [searchUser,setSearchUser]=useState("");
-  const { user,username,selectedFriend } = useContext(LoginContext);
+  const { user,selectedFriend } = useContext(LoginContext);
    const { pathname } = useLocation();
+
+const {darkMode}=useContext(ThemeContext);
 
   if (!user && pathname === "/chat") return <Redirect to="/login" />
   
 
     return (
 
-        <div className="chat-container">
+        <div className={darkMode ? "darkMode": "chat-container"}>
         <div className="left-side">
           <div className="left-side-item searchuser">
             <SearchInput searchText={searchUser} handleOnChange={setSearchUser}/>

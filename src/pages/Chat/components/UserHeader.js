@@ -3,7 +3,7 @@ import { LoginContext } from '../../../contexts/LoginContext';
 
 function UserHeader() {
 
-    const {selectUser,selectedUser,selectFriend,selectedFriend}=useContext(LoginContext)
+    const {selectedUser}=useContext(LoginContext)
     if (!selectedUser) return null;
   
     return (

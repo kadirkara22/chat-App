@@ -1,9 +1,9 @@
-import userEvent from '@testing-library/user-event';
+
 import React, { useContext } from 'react'
 import { LoginContext } from '../../../contexts/LoginContext';
 import "../ChatPage.css"
 function Message() {
-    const {user,selectedUser,selectedFriend}=useContext(LoginContext)
+    const {user,selectedUser}=useContext(LoginContext)
    
     return (
         <div className="messageTextUser">
