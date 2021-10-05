@@ -247,14 +247,15 @@
 }
 
 .logout {
-  height: 36px;
+  font-size: 30px;
+  height: 40px;
   padding: 5px;
   margin-right: 5px;
+  padding-bottom: 15px;
   border: none;
   background: red;
-  color: black;
+  color:white;
   cursor: pointer;
-  font-weight: bold;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -308,6 +309,24 @@ background-image: url(https://www.sonsuzlukisareti.com/wp-content/uploads/2020/0
 .darkMode .headerUserInfo{
   color: white;
 }
+
+.darkMode .logout {
+  font-size: 30px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 5px;
+  padding-bottom: 15px;
+  border: none;
+  background: red;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -344,15 +363,15 @@ background-image: url(https://www.sonsuzlukisareti.com/wp-content/uploads/2020/0
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color:white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
   background-color: #2196F3;
-}
 
+}
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }

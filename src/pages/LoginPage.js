@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import { LoginContext } from "../contexts/LoginContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 import "./LoginPage.css"
-
+import "./Chat/ChatPage.css";
 
 function LoginPage() {
 
@@ -11,6 +12,7 @@ function LoginPage() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
      const { pathname } = useLocation();
+  
 
      const handleSubmitLogin=()=>{
          login ({
