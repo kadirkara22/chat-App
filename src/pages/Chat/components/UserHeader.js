@@ -3,7 +3,8 @@ import { LoginContext } from '../../../contexts/LoginContext';
 
 function UserHeader() {
 
-    const {selectedUser}=useContext(LoginContext)
+    const {selectedUser,selectFriend}=useContext(LoginContext)
+
     if (!selectedUser) return null;
   
     return (
@@ -14,7 +15,7 @@ function UserHeader() {
     </div>  
     <div className="headerUserName">{`${selectedUser.first_name} ${selectedUser.last_name}`}</div>
     </div>
-    <button className="headerUserInfo">...</button>
+    <button className="headerUserInfo" onClick={()=>{selectFriend(selectedUser.id)}}>...</button>
     
     </>
     )

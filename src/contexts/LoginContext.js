@@ -10,27 +10,31 @@ const LoginContextProvider=(props)=>{
     const [searchUser]=useState("")
 
     const [selectedUser, setSelectedUser] = useState(null);
-    const [selectedFriend, setSelectedFriend] = useState("");
+
+    const [selectedFriend, setSelectedFriend] = useState(null);
+
     const [userList,setUserList]=useState(MockUserList.users);
 
 
     const selectUser = (userId) => {
       const user = userList.find((user) => user.id === userId);
       setSelectedUser(user);
+      
     };
 
     const selectFriend = (userId) => {
       const user = userList.find((user) => user.id === userId);
       setSelectedFriend(user);
+    
     };
- 
+    
 
     const login = (user) => {
     setUser(user);
         localStorage.setItem("chat_app_user", JSON.stringify(user));
   
       };
-console.log(user)
+
       const logout = () => {
         setUser(null);
         localStorage.removeItem("chat_app_user");
@@ -80,7 +84,7 @@ localStorage.setItem('chat_app_user_list',JSON.stringify(newUserList))
 
 
     return (
-<LoginContext.Provider value={{user,login,logout,userList,selectUser,selectedUser,searchUser,setSelectedFriend,selectedFriend,selectFriend,handleSendNewMessage}}>
+<LoginContext.Provider value={{user,login,logout,userList,selectUser,selectedUser,searchUser,selectedFriend,selectFriend,handleSendNewMessage}}>
     {props.children}
 </LoginContext.Provider>
     )

@@ -9,6 +9,7 @@ import SearchInput from './components/SearchInput';
 import Settings from './components/Settings';
 import UserHeader from './components/UserHeader';
 import UserList from './components/UserList';
+import UserInfo from './components/UserInfo';
 
 
 function ChatPage (){
@@ -19,7 +20,7 @@ function ChatPage (){
 const {darkMode}=useContext(ThemeContext);
 
   if (!user && pathname === "/chat") return <Redirect to="/login" />
-  
+
 
     return (
 
@@ -33,27 +34,29 @@ const {darkMode}=useContext(ThemeContext);
             </div>
           <div className="left-side-item settings">
             <Settings />
-          
           </div>
         </div>
-  
+  {selectedFriend ? 
+      <div className="right-side userInfoTamboyut">
+  <UserInfo />
+  </div> :
         <div className="right-side">
-
-
-
+       
           <div className="right-side-item header">
          
             <UserHeader />
           </div>
           <div className="right-side-item message-form">
-          {selectedFriend ? selectedFriend.first_name :null}
+          
               <Message />
               
           </div>
           <div className="right-side-item messageinput">
             <MessageInput />
-          </div>
+          </div> 
+
         </div>
+}
       </div>
     )
 }

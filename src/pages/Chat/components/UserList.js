@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { LoginContext } from '../../../contexts/LoginContext';
 import "../ChatPage.css"
+
 function UserList({searchText}) {
 
     const { userList,selectUser } = useContext(LoginContext);
@@ -17,7 +18,7 @@ function UserList({searchText}) {
 
                             <div className="userInfo" key={i}>
                                 <div className="userImage">
-                                    <img src={`${item.image}`} /* onClick={()=>selectFriend(item.id)} */ />
+                                    <img src={`${item.image}`}/>
                                 </div>
 
                                 <div className="userText" onClick={() => selectUser(item.id)}>
@@ -33,7 +34,8 @@ function UserList({searchText}) {
 
 
                         )
-                    })
+                    }) 
+                
             }
         </div>
     )

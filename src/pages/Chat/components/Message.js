@@ -4,7 +4,7 @@ import { LoginContext } from '../../../contexts/LoginContext';
 import "../ChatPage.css"
 function Message() {
     const {user,selectedUser}=useContext(LoginContext)
-   
+ 
     return (
         <div className="messageTextUser">
          
@@ -14,7 +14,7 @@ function Message() {
                 <div key={key} className="messageInfoUser">{message.text}</div>
                 </div>
           })
-        : null}
+        : <div ><span >Mesajlaşmaya başlamak için bir sohbet seçin</span></div>}
          
         </div>
     )
