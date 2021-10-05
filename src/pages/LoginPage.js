@@ -23,7 +23,7 @@ function LoginPage() {
          }   
          )
      };   
-
+ 
  
     if (user && pathname === "/login") return <Redirect to="/chat" />
     if (user && pathname === "/") return <Redirect to="/chat" />
