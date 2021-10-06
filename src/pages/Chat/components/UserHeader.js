@@ -9,9 +9,9 @@ function UserHeader() {
   
     return (
         <>
-        <div className="headerInfo">
+        <div className="headerInfo"  onClick={()=>{selectFriend(selectedUser.id)}}>
       <div className="headerImage">
-        <img src={`${selectedUser.image}`}></img>
+        <img src={`${selectedUser.image}`}  ></img>
     </div>  
     <div className="headerUserName">{`${selectedUser.first_name} ${selectedUser.last_name}`}</div>
     </div>

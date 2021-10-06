@@ -51,16 +51,37 @@
    
 }
 
-.userImage img {
+
+
+.userImage img
+{
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
 }
+.userImage img:hover
+{
+    z-index:2;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);  
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 
 .userImage img:hover {
   cursor: pointer;
 }
+
+
 .userText {
   margin: 2px;
   padding: 2px;
@@ -474,9 +495,33 @@ input:checked + .slider:before {
   color: white;
   background-image: url(https://i.pinimg.com/originals/32/09/f6/3209f6e2ca4c1580132727d012bc8ec4.jpg);
 }
-.UserInfoImage{
-  margin-bottom: 24px;
+
+.UserInfoImage
+{ margin-bottom: 24px;
+  cursor: pointer;
+    position: relative;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
 }
+.UserInfoImage:hover
+{
+    z-index:2;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);  
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+
+
+
+
+
 .userFirstNameLastName{
   margin-bottom: 24px;
   font-weight: bold;
@@ -505,7 +550,7 @@ input:checked + .slider:before {
   width: 150px;
   height: 80px;
   font-size: 17px;
-  cursor: pointer;
+  cursor: pointer; 
 }
 .exitUser{
   display: flex;
