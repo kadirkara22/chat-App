@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect} from 'react'
 import { Redirect, useLocation } from 'react-router-dom';
 import { LoginContext } from '../../../contexts/LoginContext'
 
@@ -7,15 +7,13 @@ export default function UserInfo() {
     const { pathname } = useLocation();
    const [exit,SetExit]=useState(null);
 
-   console.log(exit)
-
 
  const onhandleExit=()=>{
    setSelectedFriend(null)
-
- 
- }
- 
+   
+    
+    }
+   
 
     if (selectedFriend && pathname === "/chat") return <Redirect to="/chat/:userid" />
     if (!selectedFriend && pathname === "/chat/:userid") return <Redirect to="/chat" />

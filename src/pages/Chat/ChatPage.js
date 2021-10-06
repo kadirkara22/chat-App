@@ -16,10 +16,13 @@ function ChatPage (){
   const [searchUser,setSearchUser]=useState("");
   const { user,selectedFriend,selectedUser } = useContext(LoginContext);
    const { pathname } = useLocation();
-
+ 
 const {darkMode}=useContext(ThemeContext);
 
+  
+
   if (!user && pathname === "/chat") return <Redirect to="/login" />
+  if (!user && pathname === "/chat/:userid") return <Redirect to="/login" />
 
     return (
 

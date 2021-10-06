@@ -27,12 +27,14 @@ const LoginContextProvider=(props)=>{
       setSelectedFriend(user);
     
     };
-    
+   
+
+
 
     const login = (user) => {
-    setUser(user);
-        localStorage.setItem("chat_app_user", JSON.stringify(user));
-  
+    setUser(user.username,user.first_name,user.last_name);
+    localStorage.setItem("chat_app_user", JSON.stringify(user));
+         
       };
 
       const logout = () => {
