@@ -1,19 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Redirect, useLocation } from 'react-router-dom';
 import { LoginContext } from '../../../contexts/LoginContext'
 
 export default function UserInfo() {
-    const { selectedFriend } = useContext(LoginContext);
-   
+    const { selectedFriend,user,setSelectedFriend} = useContext(LoginContext);
     const { pathname } = useLocation();
+   const [exit,SetExit]=useState(null);
 
+   console.log(exit)
+
+
+ const onhandleExit=()=>{
+   setSelectedFriend(null)
+
+ 
+ }
+ 
 
     if (selectedFriend && pathname === "/chat") return <Redirect to="/chat/:userid" />
+    if (!selectedFriend && pathname === "/chat/:userid") return <Redirect to="/chat" />
+    
+    if (!user && pathname === "/chat/:userid") return <Redirect to="/login" />
     
     return (
         <div> 
             <div className="exitUser">
-                             <button type="submit" className="exitUserX">X</button>
+                             <button type="submit" className="exitUserX" onClick={onhandleExit} >X</button>
                  </div>
             
             <div className="userdetails">
@@ -30,7 +42,7 @@ export default function UserInfo() {
             <div className="userPhone">
                 <div className="userMessage">
                     <div className="userMessageImage">
-                    <i class="far fa-comment"></i>
+                    <i className="far fa-comment"></i>
                     </div>
                     <div className="userMessageText">
                                  Message
@@ -39,7 +51,7 @@ export default function UserInfo() {
                 </div>
                 <div className="userMessage">
                     <div className="userMessageImage">
-                    <i class="fas fa-phone-alt"></i>
+                    <i className="fas fa-phone-alt"></i>
                     </div>
                     <div className="userMessageText">
                             Call
@@ -48,7 +60,7 @@ export default function UserInfo() {
                 </div>
                 <div className="userMessage">
                     <div className="userMessageImage">
-                    <i class="fas fa-video"></i>
+                    <i className="fas fa-video"></i>
                     </div>
                     <div className="userMessageText">
                         Video

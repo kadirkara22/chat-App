@@ -84,7 +84,7 @@ localStorage.setItem('chat_app_user_list',JSON.stringify(newUserList))
 
 
     return (
-<LoginContext.Provider value={{user,login,logout,userList,selectUser,selectedUser,searchUser,selectedFriend,selectFriend,handleSendNewMessage}}>
+<LoginContext.Provider value={{user,login,logout,userList,selectUser,selectedUser,searchUser,selectedFriend,setSelectedFriend,selectFriend,handleSendNewMessage}}>
     {props.children}
 </LoginContext.Provider>
     )

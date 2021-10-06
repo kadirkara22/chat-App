@@ -209,7 +209,24 @@
   background: rgba(148, 206, 174, 0.562);
   cursor: pointer;
 }
+.startMessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  flex: 1;
+  background-image: url(https://i.pinimg.com/236x/35/c8/68/35c868bb5c851fd5eb625332284cd0c8.jpg);
+}
 
+.startMessage span {
+  background: grey;
+  padding: 5px 20px 5px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 .messageinput {
   height: 50px;
   background: rgba(101, 156, 140, 0.041);
@@ -337,6 +354,11 @@ background-image: url(https://www.sonsuzlukisareti.com/wp-content/uploads/2020/0
     -ms-border-radius:10px ;
     -o-border-radius:10px ;
  
+}
+
+.darkMode .startMessage{
+  background-image: url(https://i.pinimg.com/474x/51/f1/87/51f1876a6301557c38d4ac203f5cc985.jpg);
+  color: white;
 }
 .darkMode .message-form{
   background-image: url(https://i.pinimg.com/474x/51/f1/87/51f1876a6301557c38d4ac203f5cc985.jpg);
@@ -474,7 +496,7 @@ input:checked + .slider:before {
 
 .userMessage{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   background: rgb(212, 206, 206);
@@ -482,6 +504,8 @@ input:checked + .slider:before {
   padding: 10px;
   width: 150px;
   height: 80px;
+  font-size: 17px;
+  cursor: pointer;
 }
 .exitUser{
   display: flex;

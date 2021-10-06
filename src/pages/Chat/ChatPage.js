@@ -14,13 +14,12 @@ import UserInfo from './components/UserInfo';
 
 function ChatPage (){
   const [searchUser,setSearchUser]=useState("");
-  const { user,selectedFriend } = useContext(LoginContext);
+  const { user,selectedFriend,selectedUser } = useContext(LoginContext);
    const { pathname } = useLocation();
 
 const {darkMode}=useContext(ThemeContext);
 
   if (!user && pathname === "/chat") return <Redirect to="/login" />
-
 
     return (
 
@@ -46,7 +45,7 @@ const {darkMode}=useContext(ThemeContext);
          
             <UserHeader />
           </div>
-          <div className="right-side-item message-form">
+          <div className={`right-side-item ${selectedUser ? "message-form" : "startMessage"}`}>
           
               <Message />
               
